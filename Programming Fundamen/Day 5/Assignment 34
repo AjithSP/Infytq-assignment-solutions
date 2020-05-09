@@ -1,0 +1,19 @@
+#PF-Assg-34
+
+def find_pairs_of_numbers(num_list,n):
+    count_pairs=0
+    for i in range (0,len(num_list)-1):
+        for j in range (i+1,len(num_list)):
+            cur_val=num_list[i]
+            nex_val=num_list[j]
+            if cur_val>n:
+                break
+            elif cur_val+nex_val==n:
+                count_pairs+=1 
+                break
+    return count_pairs
+    #Remove pass and write your logic here
+
+num_list=[1, 2, 4, 5, 6]
+n=6
+print(find_pairs_of_numbers(num_list,n))
